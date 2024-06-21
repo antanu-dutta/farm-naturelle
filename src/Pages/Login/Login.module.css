@@ -1,0 +1,130 @@
+.login {
+  background-color: #f6f5f0;
+  margin-top: 20px;
+}
+.login-navigation {
+  color: gray;
+  padding: 8px 0;
+  display: block;
+}
+.login-form-container {
+  padding: 50px 0 10px;
+}
+.login-form-container h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 11px;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: start;
+}
+.login-form-input-field {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+.login-form-input-field * {
+  background-color: #fff;
+  padding: 12px 9px;
+  border-radius: 9px;
+  border: none;
+  outline: none;
+}
+.login-form-input-field select {
+  width: 40%;
+  text-align: center;
+}
+
+.login-form-input-field input {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4e4e4e;
+}
+.login-form-submit-btn {
+  background: #006944;
+  padding: 8px 45px;
+  color: #fff;
+  border-radius: 8px;
+  display: block;
+}
+.remember-me-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.remember-me-checkbox span {
+  margin-left: 13px;
+  color: #4e4e4e;
+}
+.no-account {
+  margin-top: 7px;
+  display: block;
+  color: #222325;
+}
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 10px;
+}
+.first-hr {
+  width: 50px;
+  border: 1px solid rgb(47, 47, 47);
+  margin-right: auto;
+}
+.second-hr {
+  width: 50px;
+  border: 1px solid rgb(47, 47, 47);
+  margin-left: auto;
+}
+.signin-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid #686d76;
+  width: 100%;
+  padding: 4px 0;
+  border-radius: 8px;
+  transition: 0.2s;
+  margin-top: 9px;
+  font-size: 14px;
+  color: #373a40;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signin-option:hover {
+  background-color: #222325;
+  color: #fff;
+}
+.signin-option img {
+  width: 40px;
+}
+.input-alert {
+  color: red;
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
+}
+
+/* Media quaries  */
+
+@media (min-width: 1024px) {
+  .login-container {
+    display: flex;
+    justify-content: center;
+  }
+  .login-container-details {
+    width: 55%;
+  }
+}

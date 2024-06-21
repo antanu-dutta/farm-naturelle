@@ -1,0 +1,33 @@
+.offer {
+  background-color: #006944;
+}
+.offer-content {
+  padding: 10px 0;
+  color: #fff;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  gap: 4px;
+}
+
+@media (min-width: 640px) {
+  .offer-content {
+    font-size: 14px;
+    gap: 10px;
+  }
+  .copy-btn {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .offer-content {
+    font-size: 16px;
+    gap: 14px;
+  }
+  .copy-btn {
+    font-size: 25px;
+  }
+}

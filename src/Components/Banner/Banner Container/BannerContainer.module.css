@@ -1,0 +1,14 @@
+.desktop-banner {
+  display: none;
+}
+
+/* Media Quaries  */
+
+@media (min-width: 1024px) {
+  .mobile-banner {
+    display: none;
+  }
+  .desktop-banner {
+    display: block;
+  }
+}

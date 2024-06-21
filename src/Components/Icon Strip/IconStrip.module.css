@@ -1,0 +1,41 @@
+.iconstrip-main-container {
+  background: #006944;
+  position: relative;
+  width: 100%;
+  padding: 12px 0;
+}
+.iconstrip-container {
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+}
+.iconstrip {
+  width: auto;
+  text-align: center;
+  border-left: 0;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  margin-right: 20px;
+  align-items: center;
+  gap: 12px;
+}
+.iconstrip img {
+  width: 38px;
+  height: 38px;
+}
+.iconstrip span {
+  font-size: 14px;
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .iconstrip-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+  }
+}
