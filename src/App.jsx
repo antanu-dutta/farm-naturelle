@@ -2,8 +2,10 @@ import HeaderContainer from "./Components/Header/Header Container/HeaderContaine
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
+import { useRef } from "react";
 
 function App() {
+  const ref = useRef(null);
   return (
     <>
       <BrowserRouter>

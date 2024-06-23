@@ -1,0 +1,98 @@
+.ayurvedic {
+  padding: 15px;
+  border-radius: 40px 40px 0 0;
+  background-color: #006944;
+  padding-bottom: 59px;
+}
+.ayurvedic-container {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.ayurvedic-content h2 {
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.ayurvedic-content p {
+  color: #d6d6d6;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+.ayurvedic-content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ayurvedic-content ul li {
+  padding: 8px 16px;
+  width: 100%;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: 600;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+}
+.ayurvedic-content ul li img {
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+}
+.ayurvedic-content a {
+  padding: 16px 36px;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+.ayurvedic-content a:hover {
+  background-color: #fff;
+  color: #006944;
+}
+
+.ayurvedic-img {
+  transform: translateY(12px);
+}
+.ayurvedic-img picture img {
+  filter: blur(0);
+  transition-property: filter;
+  transition-duration: 0.3s;
+}
+
+@media (min-width: 767px) {
+  .ayurvedic-content h2,
+  .ayurvedic-content p {
+    text-align: left;
+  }
+  .ayurvedic-content h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  .ayurvedic-content p {
+    font-size: 16px;
+  }
+  .ayurvedic {
+    padding-bottom: 15px;
+  }
+  .ayurvedic-container {
+    flex-direction: row;
+  }
+}

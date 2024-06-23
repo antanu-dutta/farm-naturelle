@@ -26,7 +26,7 @@ function IconStrip() {
         <div className="container">
           <div className={`${styles["iconstrip-container"]}`}>
             {iconStripDetails.map((item, index) => (
-              <div className={`${styles["iconstrip"]}`}>
+              <div className={`${styles["iconstrip"]}`} key={index}>
                 <img src={item.url} alt="" />
                 <span>{item.text}</span>
               </div>

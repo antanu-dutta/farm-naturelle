@@ -47,9 +47,9 @@
 .mobile-nav-links-container {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 10;
+  transition: 0.5s;
 }
 .mobile-nav-links {
   width: 85%;
@@ -104,13 +104,13 @@
 .mobile-cart {
   position: fixed;
   top: 0;
-  right: 0;
   border-radius: 30px;
   background-color: #fff;
   height: 100vh;
   width: 100%;
   padding: 20px;
   z-index: 10;
+  transition: 0.5s linear;
 }
 .cart-navigation {
   display: flex;
@@ -144,6 +144,11 @@
   color: rgb(77, 77, 192);
   font-weight: 600;
 }
+/* .appear-mobile-nav {
+  transition: left 0.2s;
+  left: 0;
+  opacity: 1;
+} */
 /* Meadia quaries  */
 
 @media (min-width: 640px) {
@@ -160,6 +165,12 @@
 
 @media (min-width: 1280px) {
   .mobile-navbar {
+    display: none;
+  }
+  .mobile-nav-links-container {
+    display: none;
+  }
+  .mobile-cart {
     display: none;
   }
 }
