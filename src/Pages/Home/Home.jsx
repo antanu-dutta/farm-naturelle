@@ -7,9 +7,15 @@ import ShopCategory from "../../Components/Shop Category/ShopCategory";
 import { concernData, cocernlogoUrl } from "../../Data Asset/ShopCategory";
 import { productsData, productslogoUrl } from "../../Data Asset/ProductData";
 import Ayurvedic from "../../Components/Ayurvedic/Ayurvedic";
-import ProductCard from "../../Components/Product Card/ProductCard";
+import { useSwiper } from "swiper/react";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css";
+import ProductContainer from "../../Components/Product Container/ProductContainer";
 
 function Home() {
+  const swiper = useSwiper();
   return (
     <div className="pt-[150px]">
       <BannerContainer />
@@ -25,7 +31,7 @@ function Home() {
         logoUrl={productslogoUrl}
         title={"Shob By Product"}
       />
-      <ProductCard />
+      <ProductContainer />
     </div>
   );
 }
