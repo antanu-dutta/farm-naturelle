@@ -2,24 +2,22 @@ import React from "react";
 import styles from "./ShopCategory.module.css";
 import ShopCategoryItem from "../Shop Category Item/ShopCategoryItem";
 
-function ShopCategory({ data }) {
+function ShopCategory({ data, logoUrl, title }) {
   return (
     <div>
       <div className={`${styles["shop-category"]}`}>
         <div className="container">
           <div className={`${styles["shop-category-container"]}`}>
             <div className={`${styles["shop-category-container-content"]}`}>
-              <img
-                src="https://farmnaturelle.com/cdn/shop/files/Group_110799_3_1_1.png?v=1713349843"
-                alt=""
-              />
-              <h2>Shop By Concern</h2>
+              <img src={logoUrl} alt="" />
+              <h2>{title}</h2>
               <div className={`${styles["shop-category-item-container"]}`}>
                 {data.map((item) => (
                   <ShopCategoryItem
                     url={item.url}
                     text={item.text}
                     key={item.id}
+                    borderDesign={title}
                   />
                 ))}
               </div>

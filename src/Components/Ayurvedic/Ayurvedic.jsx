@@ -54,11 +54,11 @@ function Ayurvedic() {
               </ul>
               <Link to="">BOOK Consultation @ RS 99</Link>
             </div>
-            <div classNamw={`${styles["ayurvedic-img"]}`}>
+            <div className={`${styles["ayurvedic-img"]}`}>
               <picture>
                 <source
                   media="(min-width:767px)"
-                  srcset="//farmnaturelle.com/cdn/shop/files/desk.png?v=1698732439"
+                  srcSet="//farmnaturelle.com/cdn/shop/files/desk.png?v=1698732439"
                   loading="lazy"
                   width="100%"
                   height="auto"

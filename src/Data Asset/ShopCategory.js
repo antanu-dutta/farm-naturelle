@@ -1,3 +1,5 @@
+export const cocernlogoUrl = "https://farmnaturelle.com/cdn/shop/files/Group_110799_3_1_1.png?v=1713349843"
+
 export const concernData = [
   {
     id: 1,

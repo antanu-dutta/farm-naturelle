@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 function DesktopNav() {
   const [showNavLinks, setShowNavLinks] = useState();
   const [showSearchBar, setShowSearchBar] = useState();
+  const [showWishList, setShowWishlist] = useState();
   return (
     <div>
       <div className={`${styles["destop-navbar"]}`}>
@@ -111,7 +112,10 @@ function DesktopNav() {
                   </div>
                 </div>
                 <div className={`${styles["desktop-nav-icons"]}`}>
-                  <div className={`${styles["desktop-heart-icon"]}`}>
+                  <div
+                    className={`${styles["desktop-heart-icon"]}`}
+                    onClick={() => setShowWishlist(true)}
+                  >
                     <CiHeart />
                     <div className={`${styles["dekstop-icon-badge"]}`}>0</div>
                   </div>
@@ -145,6 +149,33 @@ function DesktopNav() {
                       onClick={() => setShowSearchBar(false)}
                     >
                       <FaXmark />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {showWishList && (
+              <div className={`${styles["wishlist"]}`}>
+                <div className={`${styles["wishlist-container"]}`}>
+                  <div className={`${styles["wishlist-content"]}`}>
+                    <div className={`${styles["wishlist-content-navigation"]}`}>
+                      <Link to="/login" onClick={() => setShowWishlist(false)}>
+                        <span>Login</span>
+                      </Link>
+                      <FaXmark
+                        className="me-3 text-lg cursor-pointer"
+                        onClick={() => setShowWishlist(false)}
+                      />
+                    </div>
+                    <div className={`${styles["wishlisth-content-wishlist"]}`}>
+                      <h2>My Wishlist</h2>
+                      <div
+                        className={`${styles["wishlisth-content-wishlist-input"]}`}
+                      >
+                        <IoSearch className="text-xl" />
+                        <input type="text" />
+                      </div>
+                      <p>No Products</p>
                     </div>
                   </div>
                 </div>
