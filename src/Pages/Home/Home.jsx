@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.module.css";
-import MobileBanner1 from "../../Components/Banner/Mobile Banner 1/MobileBanner1";
 import BannerContainer from "../../Components/Banner/Banner Container/BannerContainer";
 import IconStrip from "../../Components/Icon Strip/IconStrip";
 import ShopCategory from "../../Components/Shop Category/ShopCategory";
@@ -13,9 +12,12 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css";
 import ProductContainer from "../../Components/Product Container/ProductContainer";
+import AllData from "../../Data Asset/AllProduct";
+import Benifits from "../../Components/Benifits/Benifits";
+import Gift from "../../Components/Gift/Gift";
+import Grettings from "../../Components/Grettings/Grettings";
 
 function Home() {
-  const swiper = useSwiper();
   return (
     <div className="pt-[150px]">
       <BannerContainer />
@@ -31,7 +33,33 @@ function Home() {
         logoUrl={productslogoUrl}
         title={"Shob By Product"}
       />
-      <ProductContainer />
+      <ProductContainer
+        title="Pure Honey"
+        subTitle="Bee-produced, unprocessed honey from a farm, pure and natural"
+        product={AllData}
+        category="Raw Honey"
+      />
+      <ProductContainer
+        title="Cold Prossed Cooking Oils"
+        subTitle="Cold-pressed, natural cooking oils sourced from farm ingredients for healthier cuisine."
+        product={AllData}
+        category="Cooking oil"
+      />
+      <ProductContainer
+        title="Bilona A2 Ghee"
+        subTitle="Pure, farm-sourced, made through traditional method."
+        product={AllData}
+        category="A2 Desi Cow Ghee"
+      />
+      <Benifits />
+      <ProductContainer
+        title="Herbal Juices"
+        subTitle="Pure, Organic herbal juices sourced from farm ingredients has no added sugar."
+        product={AllData}
+        category="Herbal Juices"
+      />
+      <Gift />
+      <Grettings />
     </div>
   );
 }

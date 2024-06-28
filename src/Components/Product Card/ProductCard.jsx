@@ -2,7 +2,8 @@ import { Button } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { FaRegHeart } from "react-icons/fa";
 
-function ProductCard() {
+function ProductCard(props) {
+  const { title, price } = props;
   const [mouseOver, setMouseOver] = useState(false);
 
   return (
@@ -13,7 +14,9 @@ function ProductCard() {
         onMouseLeave={() => setMouseOver(false)}
       >
         <div className="flex justify-between items-center w-full absolute p-4 z-[10]">
-          <Button className="bg-primary">Best Seller</Button>
+          <span className="bg-orange-900 text-sm text-white py-1 px-2 rounded">
+            Best Seller
+          </span>
           <FaRegHeart color="red" size={25} />
         </div>
         <div className="w-full h-full">
@@ -32,11 +35,11 @@ function ProductCard() {
         </div>
       </div>
       <div className="card-body py-4">
-        <p className="font-bold text-lg">Vana Tulsi Flower</p>
+        <p className="font-bold text-lg">{title}</p>
         <hr className="my-2 border border-gray-400" />
         <div className="flex items-center gap-4">
           <span className="line-through text-sm text-gray-500">Rs. 459.00</span>
-          <span className="text-base font-semibold ">Rs. 369.00</span>
+          <span className="text-base font-semibold ">Rs. {price}</span>
           <span className="bg-red-700 text-white rounded text-[12px] px-2 py-1">
             SAVE 20%
           </span>
