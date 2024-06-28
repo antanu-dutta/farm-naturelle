@@ -17,6 +17,8 @@ import Benifits from "../../Components/Benifits/Benifits";
 import Gift from "../../Components/Gift/Gift";
 import Grettings from "../../Components/Grettings/Grettings";
 import AmazonReview from "../../Components/Amazon Review/AmazonReview";
+import CustomerReview from "../../Components/Customer Review/CustomerReview";
+import Instagram from "../../Components/Instagram/Instagram";
 
 function Home() {
   return (
@@ -62,6 +64,7 @@ function Home() {
       <Gift />
       <Grettings />
       <AmazonReview />
+      <CustomerReview />
     </div>
   );
 }

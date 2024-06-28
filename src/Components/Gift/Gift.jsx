@@ -39,7 +39,7 @@ function Gift() {
   ];
   return (
     <div>
-      <div className="gift">
+      <div className="gift py-7">
         <div className="container">
           <div className="gift-container flex flex-col items-center">
             <h2 className="text-black text-xl md:text-2xl text-center lg:text-4xl font-semibold mb-6">
@@ -79,9 +79,9 @@ function Gift() {
             <button className="rounded-xl text-base text-primary border border-primary bg-white px-8 py-3 mt-10 font-semibold hover:text-white hover:bg-primary transition-all">
               SHOP THIS
             </button>
-            <p className="text-primary text-3xl font-semibold py-4 text-center">
+            {/* <p className="text-primary text-3xl font-semibold py-4 text-center">
               Customers love our product
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
