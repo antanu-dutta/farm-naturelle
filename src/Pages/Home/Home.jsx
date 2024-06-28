@@ -16,6 +16,7 @@ import AllData from "../../Data Asset/AllProduct";
 import Benifits from "../../Components/Benifits/Benifits";
 import Gift from "../../Components/Gift/Gift";
 import Grettings from "../../Components/Grettings/Grettings";
+import AmazonReview from "../../Components/Amazon Review/AmazonReview";
 
 function Home() {
   return (
@@ -60,6 +61,7 @@ function Home() {
       />
       <Gift />
       <Grettings />
+      <AmazonReview />
     </div>
   );
 }
