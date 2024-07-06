@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ShopCategory.module.css";
 import ShopCategoryItem from "../Shop Category Item/ShopCategoryItem";
+import { useProductContext } from "../../Context/ProductContext";
 
 function ShopCategory({ data, logoUrl, title }) {
   return (

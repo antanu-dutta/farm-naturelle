@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
-import MobileNav from "./MobileNav/MobileNav";
-import DesktopNav from "./DesktopNav/DesktopNav";
+// import styles from "./Navbar.module.css";
+
+import DesktopNav from "../Header/Navbar/DesktopNav/DesktopNav";
+import MobileNav from "./MobileNav";
 
 function Navbar() {
   return (

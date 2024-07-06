@@ -74,7 +74,12 @@ function Footer() {
               </h2>
               <div className="flex justify-evenly w-full items-center">
                 {footerImage.map((item, index) => (
-                  <img src={item.url} alt="" className="w-[120px]" />
+                  <img
+                    src={item.url}
+                    alt=""
+                    key={index}
+                    className="w-[40px] md:w-[80px] lg:w-[120px]"
+                  />
                 ))}
               </div>
             </div>
@@ -83,8 +88,8 @@ function Footer() {
       </div>
       <div className="bg-primary pt-10">
         <div className="container">
-          <div className="flex mb-16 gap-8">
-            <div className="flex-1">
+          <div className="flex flex-col lg:flex-row mb-16 gap-8">
+            <div className="lg:flex-1">
               <img
                 src="https://cdn.shopify.com/s/files/1/0781/6711/4011/files/Link_cropped-cropped-FN_logo_2021-1-e1662637473598_png.png?v=1696492045"
                 alt=""
@@ -103,29 +108,33 @@ function Footer() {
                 <FaLongArrowAltRight />
               </div>
             </div>
-            <div className="flex-1 text-white">
-              <span className="block mb-4 text-[17px] font-bold">CATEGORY</span>
-              <ul className="flex flex-col gap-4">
-                {websiteData.categories.map((item, index) => (
-                  <li className=" text-[15px] font-medium" key={index}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            <div className="lg:flex-1 flex gap-6 lg:gap-0">
+              <div className="flex-1 text-white">
+                <span className="block mb-4 text-[17px] font-bold">
+                  CATEGORY
+                </span>
+                <ul className="flex flex-col gap-4">
+                  {websiteData.categories.map((item, index) => (
+                    <li className=" text-[15px] font-medium" key={index}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex-1 text-white">
+                <span className="block mb-4 text-[17px] font-bold">
+                  IMPORTANT LINKS
+                </span>
+                <ul className="flex flex-col gap-4">
+                  {websiteData.importantLinks.map((item, index) => (
+                    <li className=" text-[15px] font-medium" key={index}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="flex-1 text-white">
-              <span className="block mb-4 text-[17px] font-bold">
-                IMPORTANT LINKS
-              </span>
-              <ul className="flex flex-col gap-4">
-                {websiteData.importantLinks.map((item, index) => (
-                  <li className=" text-[15px] font-medium" key={index}>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="flex-1 text-white">
+            <div className="lg:flex-1 text-white">
               <span className="block mb-4 text-lg font-bold">CONTACT INFO</span>
               <p className="text-base leading-6 mb-4">
                 PHONE: <br /> 9810988725, 8130531333
@@ -144,11 +153,11 @@ function Footer() {
         </div>
         <div className="border-t py-10 ">
           <div className="container">
-            <div className="flex text-white items-center justify-between">
+            <div className="flex gap-4 flex-col lg:flex-row text-white items-center justify-between">
               <span>&copy; 2024 Farm Naturelle . All rights reserved.</span>
               <div className="flex gap-3">
-                {paymentCard.map((item) => (
-                  <img src={item} className="w-12" />
+                {paymentCard.map((item, index) => (
+                  <img src={item} key={index} className="w-10 md:w-12" />
                 ))}
               </div>
             </div>

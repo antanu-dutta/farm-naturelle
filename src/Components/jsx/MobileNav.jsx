@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./MobileNav.module.css";
+import styles from "../css/MobileNav.module.css";
 import { FaBars } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
@@ -15,44 +15,48 @@ function MobileNav() {
   const [openCart, setOpenCart] = useState(false);
   useEffect(() => {
     if (openMobileNav || openCart) {
-      document.body.classList.add(styles["overflow-hidden"]);
+      document.body.classList.add("overflow-hidden");
     } else {
-      document.body.classList.remove(styles["overflow-hidden"]);
+      document.body.classList.remove("overflow-hidden");
     }
     return () => document.body.classList.remove(styles["overflow-hidden"]);
   });
   return (
     <div>
-      <div className={`${styles["mobile-navbar"]}`}>
-        <div className={`container`}>
-          <div className={`${styles["mobile-navbar-container"]}`}>
-            <div className={`${styles.bar}`}>
+      <div className="bg-[#f8f6f0] py-3 px-0 desktop:hidden">
+        <div className="container">
+          <div className="flex items-center justify-between mb-2">
+            <div className="text-2xl sm:text-3xl">
               <FaBars onClick={() => setOpenMobileNav(true)} />
             </div>
             <Link to="/">
-              <div className={`${styles["mobile-logo-container"]}`}>
+              <div>
                 <img
                   src="https://farmnaturelle.com/cdn/shop/files/Logo_1_1.png?v=1694410359"
                   alt="site-logo"
+                  className="w-[70%] object-cover"
                 />
               </div>
             </Link>
-
-            <div className={`${styles["mobile-nav-icons"]}`}>
-              <div className={`${styles["cart-icon"]}`}>
+            <div className="flex items-center gap-2 text-2xl sm:text-3xl">
+              <div>
                 <PiShoppingCartSimpleLight onClick={() => setOpenCart(true)} />
               </div>
-              <div className={`${styles["user-icon"]}`}>
+              <div>
                 <Link to="/login">
                   <CiUser />
                 </Link>
               </div>
             </div>
           </div>
-          <div className={`${styles["mobile-searchbar"]}`}>
-            <div className={`${styles["mobile-searchbar-container"]}`}>
-              <IoSearch className={`${styles["search-icon"]}`} />
-              <input type="text" placeholder="Search ..." />
+          <div>
+            <div className="flex items-center gap-4 bg-white py-3 px-1 rounded-xl">
+              <IoSearch className="text-3xl" />
+              <input
+                type="text"
+                placeholder="Search ..."
+                className="outline-none border-none text-sm text-[#4f4d4d] w-full sm:text-base"
+              />
             </div>
           </div>
         </div>
@@ -61,39 +65,40 @@ function MobileNav() {
       {/* // ! Open Cart  */}
 
       <div
-        className={`${styles["mobile-cart"]} ${
+        className={`fixed top-0 rounded-[30px] bg-white h-screen w-full p-5 z-[10] transition-all xl:hidden ${
           openCart ? "right-0" : "right-[-100%]"
         }`}
       >
-        <div className={`${styles["cart-navigation"]}`}>
+        <div className="flex items-center justify-between">
           <div></div>
-          <h2>Shopping Cart</h2>
-          <div
-            className={`${styles["cart-xmark-btn"]}`}
-            onClick={() => setOpenCart(false)}
-          >
+          <h2 className="uppercase text-lg text-[#3f3f3f] font-bold">
+            Shopping Cart
+          </h2>
+          <div className="text-2xl" onClick={() => setOpenCart(false)}>
             <FaXmark />
           </div>
         </div>
-        <div className={`${styles["cart-cart-items"]}`}>
+        <div className="flex flex-col items-center justify-center gap-5 mt-5">
           <img
             src="https://cdn.shopify.com/s/files/1/0362/6912/9860/t/6/assets/1659690328.png?v=1659690329"
             alt="cart-icon"
           />
-          <span>Your Shopping Card is Empty</span>
-          <p>Continue shopping</p>
+          <span className="italic text-[#3f3f3f] text-sm font-bold">
+            Your Shopping Card is Empty
+          </span>
+          <p className="text-blue-800 font-semibold">Continue shopping</p>
         </div>
       </div>
 
       {/* // ! Open Navbar  */}
 
       <div
-        className={`${styles["mobile-nav-links-container"]} ${
+        className={`fixed top-0 w-full z-[10] transition-all xl:hidden ${
           openMobileNav ? "left-0" : "left-[-100%]"
         }`}
       >
-        <div className={`${styles["mobile-nav-links"]}`}>
-          <div className={`${styles["mobile-nav-nagigation"]}`}>
+        <div className="w-[85%] h-screen bg-white p-6 overflow-y-auto">
+          <div className="flex items-center justify-between">
             {showMobileNavItem === "Shob By Concern" ? (
               <div
                 style={{
@@ -150,7 +155,7 @@ function MobileNav() {
               ""
             )}
             <div
-              className={`${styles["mobile-nav-navigation-cross-btn"]}`}
+              className="w-[40px] h-[40px] bg-[#4b4b4b] flex items-center justify-center rounded text-white text-2xl cursor-pointer"
               onClick={() => setOpenMobileNav(false)}
             >
               <FaXmark />
@@ -165,17 +170,30 @@ function MobileNav() {
           {!showMobileNavItem && (
             <div className={`${styles["mobile-nav-menu-items-link"]}`}>
               <ul>
-                <li onClick={() => setShowMobileNavItem("Shob By Concern")}>
+                <li
+                  onClick={() => setShowMobileNavItem("Shob By Concern")}
+                  className="flex items-center justify-between py-4 px-0 border-b text-lg font-normal text-[#44444]"
+                >
                   Shob By Concern <IoIosArrowForward size={23} />
                 </li>
-                <li onClick={() => setShowMobileNavItem("Shob By Products")}>
+                <li
+                  onClick={() => setShowMobileNavItem("Shob By Products")}
+                  className="flex items-center justify-between py-4 px-0 border-b text-lg font-normal text-[#44444]"
+                >
                   Shob By Products <IoIosArrowForward size={23} />
                 </li>
-                <li onClick={() => setShowMobileNavItem("Business with us")}>
+                <li
+                  onClick={() => setShowMobileNavItem("Business with us")}
+                  className="flex items-center justify-between py-4 px-0 border-b text-lg font-normal text-[#44444]"
+                >
                   Business with us <IoIosArrowForward size={23} />
                 </li>
-                <li>Consult an acharya(Doctor)</li>
-                <li>Gifting</li>
+                <li className="flex items-center justify-between py-4 px-0 border-b text-lg font-normal text-[#44444]">
+                  Consult an acharya(Doctor)
+                </li>
+                <li className="flex items-center justify-between py-4 px-0 border-b text-lg font-normal text-[#44444]">
+                  Gifting
+                </li>
               </ul>
             </div>
           )}
@@ -222,7 +240,7 @@ function MobileNav() {
               <li>Contact us</li>
             </ul>
           )}
-          <div className={`${styles["mobile-nav-contact-us"]}`}></div>
+          <div className="h-[150px] w-full border-b"></div>
           <span
             style={{
               display: "block",
@@ -234,7 +252,7 @@ function MobileNav() {
           >
             Got a question? Call us
           </span>
-          <div className={`${styles["mobile-nav-contact-phone-icon"]}`}>
+          <div className="flex items-center justify-center p-4">
             <BsTelephone />
           </div>
         </div>

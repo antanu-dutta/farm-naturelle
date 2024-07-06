@@ -65,7 +65,7 @@ function Gift() {
                 }}
               >
                 {giftContent.map((item, index) => (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <GiftBox
                       title={item.title}
                       image={item.imageUrl}

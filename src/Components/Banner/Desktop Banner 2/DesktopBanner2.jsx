@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./DesktopBanner2.module.css";
+import { Link } from "react-router-dom";
 
 function DesktopBanner2() {
   return (
@@ -24,7 +25,9 @@ function DesktopBanner2() {
                   />
                   <span>Over 50 lac+ product sold</span>
                 </div>
-                <button>EXPLORE OUR PRODUCT</button>
+                <Link to="/collection/all-products">
+                  <button>EXPLORE OUR PRODUCT</button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Grettings() {
   return (
@@ -36,9 +37,12 @@ function Grettings() {
                 Naturelle that nourish both body and soul.
               </p>
               <div>
-                <button className="text-white font-bold border w-full lg:w-fit rounded py-2 px-6 lg:me-4 mb-4 lg:mb-0">
-                  KNOW MORE
-                </button>
+                <Link to="/about-us">
+                  <button className="text-white font-bold border w-full lg:w-fit rounded py-2 px-6 lg:me-4 mb-4 lg:mb-0">
+                    KNOW MORE
+                  </button>
+                </Link>
+
                 <button className="py-2 px-6 text-primary w-full lg:w-fit bg-white rounded font-bold ">
                   BOOK A FARM VISIT
                 </button>

@@ -1,0 +1,10 @@
+.mobile-nav-menu-items-link li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid gray;
+  font-size: 17px;
+  font-weight: 400;
+  color: #444444;
+}

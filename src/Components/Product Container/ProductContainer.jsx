@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ProductCard from "../Product Card/ProductCard";
+import { useProductContext } from "../../Context/ProductContext";
 
-function ProductContainer({ title, subTitle, product, category }) {
-  const filteredProduct = product.filter((item) => item.category === category);
-  console.log(filteredProduct);
+function ProductContainer({ title, subTitle, category }) {
+  const { getFilter } = useProductContext();
+  const filteredProduct = getFilter(category);
   return (
     <div>
       <div className="flex items-center justify-between flex-col lg:flex-row lg:py-20 py-10">
@@ -40,9 +41,9 @@ function ProductContainer({ title, subTitle, product, category }) {
               },
             }}
           >
-            {filteredProduct.map((item) => (
-              <SwiperSlide key={item.id}>
-                <ProductCard title={item.name} price={item.price} />
+            {filteredProduct.map((item, index) => (
+              <SwiperSlide key={index}>
+                <ProductCard item={item} />
               </SwiperSlide>
             ))}
           </Swiper>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styles from "./HeaderContainer.module.css";
-import Offer from "../Offer/Offer";
-import Navbar from "../Navbar/Navbar";
+import Offer from "./Offer";
+import Navbar from "./Navbar";
 
 function HeaderContainer() {
   const [fixed, setFixed] = useState(false);
@@ -19,7 +18,11 @@ function HeaderContainer() {
     };
   }, []);
   return (
-    <div className={`${styles["fixed-nav"]} ${fixed ? "shadow-xl" : ""}`}>
+    <div
+      className={`fixed top-0 left-0 z-[100000] w-full bg-white ${
+        fixed ? "shadow-xl" : ""
+      }`}
+    >
       <Offer />
       <Navbar />
     </div>
